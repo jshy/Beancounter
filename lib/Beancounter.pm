@@ -36,35 +36,21 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
     use Beancounter;
 
-    my $foo = Beancounter->new();
+    my $bc = Beancounter->new();
     ...
+		my $bc = Beancounter->new(journal => 'Some::Journal::Store', ledger => 'Some::Ledger::Store');
 
-=head1 EXPORT
+=head1 ATTRIBUTES
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+=head2 journal
 
-=head1 SUBROUTINES/METHODS
+Journal Class to instantiate. Defaults to Beancounter::Journal
 
-=head2 function1
+=head2 ledger
 
-=cut
-
-sub function1 {
-}
-
-=head2 function2
-
-=cut
-
-sub function2 {
-}
+Ledger Class to instantiate. Defaults to Beancounter::Ledger
 
 =head1 AUTHOR
 

@@ -8,15 +8,19 @@ class Beancounter::Journal {
 		isa => 'Beancounter::Journal::Transaction',
 	);
 
-
+	has store => (
+		is => 'rw',
+		isa => 'Beancounter::Store',
+	);
 	
 }
 1;
 
-__END__
 
 =head1 NAME
 
-=cut
+	Beancounter::Journal
 
+=head1 SYNOPSIS
 
+	

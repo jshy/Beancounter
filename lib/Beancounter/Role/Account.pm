@@ -5,13 +5,13 @@ role Beancounter::Role::Account {
 	requires 'credit';
 
 
-	has 'account_name' => (
+	has ['account_code', 'account_name'] => (
 		isa => 'Str',
 		is => 'rw',
 	);
 
 	has 'balance' => (
-		traits => ['Number'],
+#		traits => ['Number'],
 		isa => 'Num',
 		is => 'rw',
 		required => 1,

@@ -2,6 +2,7 @@ use MooseX::Declare;
 
 class Beancounter::Ledger {
 	use Modern::Perl;
+	use Beancounter::Journal::Transaction;
 
 	has 'account' => (
 		traits => ['Hash'],
@@ -9,18 +10,25 @@ class Beancounter::Ledger {
 		isa => 'HashRef',
 		required => 1,
 		default => sub { {} },
-		handles => { get => 'get' },
+		handles => { 
+				get_account 		=> 'get',
+				add_account 		=> 'set',
+				delete_account 	=> 'delete',
+				list_accounts 	=> 'keys',
+				is_account 			=> 'exists',
+				},
 		);
 
 	method post (Beancounter::Journal::Transaction $trans) {
-		$self->get($_->account_name)->debit($_->amount) foreach $trans->show_debits;
-		#$self->get($_->account_name)->credit($_->amount) foreach $trans->show_credits;
+		$self->get_account($_->account_code)->debit($_->amount) foreach $trans->show_debits;
+		$self->get_account($_->account_code)->credit($_->amount) foreach $trans->show_credits;
 	}
 
 	around BUILDARGS (ClassName $class: @args) {
- 		
-		my %accounts = map { $_->account_name => $_ } @args;
-		return $class->$orig( account => {$args[0]->account_name => $args[0]} );
+
+		my %accounts = map { $_->account_code => $_ } @args;
+
+		return $class->$orig(account => \%accounts);
 		
 	}
 
