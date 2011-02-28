@@ -76,7 +76,7 @@ This is either debit or credit and is restricted by the customer enum typeconstr
 
 =head1 SEE ALSO
 
-L<Beancounter::Role::Journal::Entry>
+L<Beancounter::Journal::Entry>
 
 =head1 AUTHOR
 
