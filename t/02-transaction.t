@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More;                      # last test to print
+use Test::More;
 use lib '../lib';
 use Modern::Perl;
 
@@ -27,9 +27,6 @@ $t1->add_credit($e2);
 $t1->add_credit($e4);
 
 $t1->record;
-
-diag say $t1->dump;
-
 
 done_testing();
 

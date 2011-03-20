@@ -1,8 +1,7 @@
-
 use strict;
 use warnings;
 
-use Test::More;                      # last test to print
+use Test::More;
 use lib '../lib';
 use Modern::Perl;
 

@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More;                      # last test to print
+use Test::More;
 use lib '../lib';
 use Modern::Perl;
 
@@ -42,11 +42,9 @@ foreach ($t1->show_credits) {
 
 
 
-#my $ledger = Beancounter::Ledger->new(@accounts);
-my $ledger = Beancounter::Ledger->new;
+my $ledger = Beancounter::Ledger->new(@accounts);
+#my $ledger = Beancounter::Ledger->new;
 
-#$ledger->post($t1);
-
-diag say $ledger->dump;
+$ledger->post($t1);
 
 done_testing();

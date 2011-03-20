@@ -1,7 +1,0 @@
-[2]   Stopped                 vi Types.pm  (wd: ~/dev/fx/lib/Finance/Accounting)
-[4]-  Stopped                 man MooseX::Method::Signatures  (wd: ~/dev/fx/lib/Finance/Accounting)
-[5]+  Stopped                 vi Transaction.pm  (wd: ~/dev/fx/lib/Finance/Accounting)
-[6]   Stopped                 vi 03-Entry.t
-[7]   Stopped                 vi ../lib/Finance/Accounting/Role/Entry.pm
-[8]   Stopped                 vi 00-Types.t
-[9]   Stopped                 vi 04-JournalEntry.t
