@@ -1,6 +1,6 @@
 use MooseX::Declare;
 
-class Finance::Bookkeeping::Ledger::Account::Expense with Finance::Bookkeeping::Role::Account::Expense {}
+class Beancounter::Ledger::Account::Expense extends Beancounter::Ledger::Account::DebitAccount {}
 
 1;
 

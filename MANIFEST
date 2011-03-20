@@ -15,14 +15,8 @@ lib/Beancounter/Ledger/Account/Liability.pm
 lib/Beancounter/Ledger/Account/Revenue.pm
 lib/Beancounter/Ledger.pm
 lib/Beancounter/Role/Account.pm
-lib/Beancounter/Role/Asset.pm
 lib/Beancounter/Role/CreditAccount.pm
 lib/Beancounter/Role/DebitAccount.pm
-lib/Beancounter/Role/Equity.pm
-lib/Beancounter/Role/Expense.pm
-lib/Beancounter/Role/Liability.pm
-lib/Beancounter/Role/Revenue.pm
-
 t/00-load.t
 t/01-entry.t
 t/02-transaction.t
